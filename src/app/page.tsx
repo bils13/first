@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { gothamBold, gothamLight } from '@/utils/fonts/fonts'
 import { Form } from '@/components/form/form'
 import { Label } from '@/components/labels/label'
+import { Card } from '@/components/cards/card-container'
 
 const Main = styled.main`
   display: flex;
@@ -40,6 +41,7 @@ export default function Home() {
         Por isso, confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.</h2>
     <Form />
     <Label />
+    <Card />
   </Main>
   )
 }

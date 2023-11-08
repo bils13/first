@@ -9,9 +9,10 @@ import { Button } from "../button"
 
 const FormContainer = styled.form`
     margin-top: 3.5rem;
-    border: 1px solid var(--light-gray);
+    border: 3px solid var(--light-gray);
     border-radius: 8px;
     padding: 24px;
+    box-shadow: 0 5px 2px -2px var(--light-gray);
 
     h3 {
         font-size: 26px;
