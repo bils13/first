@@ -6,6 +6,8 @@ import Hour from "../../assets/icon-hour.png"
 import { gothamBold, gothamLight } from "@/utils/fonts/fonts"
 import { InputRadio } from "../input-radio"
 import { Button } from "../button"
+import { useContext } from "react"
+import GymContext, { GymProviderProps } from "@/context/results"
 
 const FormContainer = styled.form`
     margin-top: 3.5rem;
@@ -113,7 +115,8 @@ export function Form() {
             <WrapperButton>
                 <Button 
                     value="Encontrar unidade"
-                    bgColor="var(--orange)"/>
+                    bgColor="var(--orange)"
+                    />
                 <Button 
                     value="Limpar"
                     bgColor="var(--white)"

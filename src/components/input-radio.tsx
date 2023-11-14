@@ -6,7 +6,14 @@ import styled from "styled-components"
 
 const RadioContainer = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;
+`
+
+const WrapperOptions = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
 
     input {
         height: 20px;
@@ -24,11 +31,12 @@ const RadioContainer = styled.div`
     }
 `
 
-// const Line = styled.div`
-//     border-bottom: 1px solid var(--light-gray);
-//     margin-top: 1rem;
-//     margin-bottom: 1rem;
-// `
+const Line = styled.div`
+    border-bottom: 1px solid var(--light-gray);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+`
 
 interface RadioProps {
     time: string;
@@ -39,14 +47,16 @@ interface RadioProps {
 export function InputRadio({time, hour, id}: RadioProps) {
     return (
         <RadioContainer>
-            <input type="radio" name="hour" id={id} value={id} />
-            <label className={gothamLight.className}>
-                {time}
-                <span>
-                {hour}
-                </span>
-            </label>
-            {/* <Line /> */}
+            <WrapperOptions>
+                <input type="radio" name="hour" id={id} value={id} />
+                <label className={gothamLight.className}>
+                    {time}
+                    <span>
+                    {hour}
+                    </span>
+                </label>
+            </WrapperOptions>
+            <Line />
         </RadioContainer>
     )
 }
